@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>基礎魔術方塊解法動畫版（互動版）</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fefefe;
+      color: #333;
+      padding: 2em;
+      line-height: 1.6;
+    }
+    .step {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1em;
+      margin-bottom: 1.5em;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .step h2 {
+      margin-top: 0;
+    }
+    .cube-face {
+      display: grid;
+      grid-template-columns: repeat(3, 30px);
+      grid-template-rows: repeat(3, 30px);
+      gap: 2px;
+      margin: 0.5em 0;
+    }
+    .sticker {
+      width: 30px;
+      height: 30px;
+      border-radius: 4px;
+      border: 1px solid #999;
+    }
+    .white { background: #ffffff; }
+    .yellow { background: #ffd500; }
+    .red { background: #e60026; }
+    .orange { background: #ff6d00; }
+    .blue { background: #0051ba; }
+    .green { background: #009b48; }
+  </style>
+</head>
+<body>
+  <h1>🧊 基礎魔術方塊解法（互動視覺版）</h1>
+
+  <div class="step">
+    <h2>1️⃣ 小花階段</h2>
+    <p>目標：將白色邊塊集中在黃色中心周圍，形成 "小花"。</p>
+    <div class="cube-face">
+      <div class="white sticker"></div>
+      <div class="white sticker"></div>
+      <div class="white sticker"></div>
+      <div class="white sticker"></div>
+      <div class="yellow sticker"></div>
+      <div class="white sticker"></div>
+      <div class="white sticker"></div>
+      <div class="white sticker"></div>
+      <div class="white sticker"></div>
+    </div>
+    <p>🌼 中心是黃色，四周白色像一朵花。</p>
+  </div>
+
+  <div class="step">
+    <h2>2️⃣ 白色底十字</h2>
+    <p>目標：將白色邊塊對準顏色後打到底部，形成底層十字。</p>
+    <div class="cube-face">
+      <div class="blue sticker"></div>
+      <div class="white sticker"></div>
+      <div class="green sticker"></div>
+      <div class="orange sticker"></div>
+      <div class="white sticker"></div>
+      <div class="red sticker"></div>
+      <div class="green sticker"></div>
+      <div class="white sticker"></div>
+      <div class="blue sticker"></div>
+    </div>
+    <p>⬇️ 白邊塊到底部，側邊顏色要對。</p>
+  </div>
+
+  <div class="step">
+    <h2>3️⃣ 第一層角塊（四步法）</h2>
+    <p>目標：放好白色角塊，完成整個白色底面。</p>
+    <div class="cube-face">
+      <div class="red sticker"></div>
+      <div class="white sticker"></div>
+      <div class="green sticker"></div>
+      <div class="orange sticker"></div>
+      <div class="white sticker"></div>
+      <div class="red sticker"></div>
+      <div class="green sticker"></div>
+      <div class="white sticker"></div>
+      <div class="blue sticker"></div>
+    </div>
+    <p>✅ 使用四步法將角塊放對。</p>
+  </div>
+
+  <div class="step">
+    <h2>4️⃣ 第二層邊塊</h2>
+    <p>目標：處理中間層的四個邊塊，對色插入。</p>
+    <div class="cube-face">
+      <div class="red sticker"></div>
+      <div class="red sticker"></div>
+      <div class="green sticker"></div>
+      <div class="orange sticker"></div>
+      <div class="orange sticker"></div>
+      <div class="red sticker"></div>
+      <div class="green sticker"></div>
+      <div class="green sticker"></div>
+      <div class="blue sticker"></div>
+    </div>
+    <p>↔️ 根據對齊方向使用左/右四步法插入。</p>
+  </div>
+
+  <div class="step">
+    <h2>5️⃣ 小魚公式</h2>
+    <p>目標：讓頂面變成黃色十字。</p>
+    <div class="cube-face">
+      <div class="gray sticker"></div>
+      <div class="yellow sticker"></div>
+      <div class="gray sticker"></div>
+      <div class="yellow sticker"></div>
+      <div class="yellow sticker"></div>
+      <div class="yellow sticker"></div>
+      <div class="gray sticker"></div>
+      <div class="yellow sticker"></div>
+      <div class="gray sticker"></div>
+    </div>
+    <p>➕ 使用小魚公式（前鉤公式）將「點 → L → 線 → 十字」。</p>
+  </div>
+
+  <div class="step">
+    <h2>6️⃣ 雙蚯蚓</h2>
+    <p>目標：角塊位置輪換 → 使用右左輪轉法。</p>
+    <div class="cube-face">
+      <div class="yellow sticker"></div>
+      <div class="red sticker"></div>
+      <div class="yellow sticker"></div>
+      <div class="green sticker"></div>
+      <div class="yellow sticker"></div>
+      <div class="orange sticker"></div>
+      <div class="yellow sticker"></div>
+      <div class="blue sticker"></div>
+      <div class="yellow sticker"></div>
+    </div>
+    <p>🔄 右蚯蚓翻轉 → 左蚯蚓翻轉 → 各自回位</p>
+  </div>
+
+  <div class="step">
+    <h2>7️⃣ 最後邊塊歸位</h2>
+    <p>目標：頂層四面顏色成環，還原完成。</p>
+    <div class="cube-face">
+      <div class="red sticker"></div>
+      <div class="yellow sticker"></div>
+      <div class="green sticker"></div>
+      <div class="orange sticker"></div>
+      <div class="yellow sticker"></div>
+      <div class="red sticker"></div>
+      <div class="blue sticker"></div>
+      <div class="yellow sticker"></div>
+      <div class="green sticker"></div>
+    </div>
+    <p>🎉 若三塊連線 → 後方 → 小魚公式重複 → 解開魔方！</p>
+  </div>
+</body>
+</html>
